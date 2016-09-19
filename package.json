@@ -1,0 +1,20 @@
+{
+  "name": "nodeloginapp",
+  "version": "1.0.0",
+  "description": "node ejs mongodb boostrap site with authentication functionality",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app" //just run npm start in terminal within the working directory
+  },
+  "author": "F",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.8",
+    "nodemon": "^1.10.0"
+  }
+}

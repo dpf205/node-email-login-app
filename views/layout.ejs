@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title><%= pagetitle %> |</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script><!-- Tether for Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <button type="button" data-toggle="collapse" data-target="#navbar" class="navbar-toggler hidden-md-up pull-xs-right">&#x2630;</button>
+    <div id="navbar" class="navbar-nav collapse navbar-toggleable-sm">
+        <div class="container"><a href="/" class="navbar-brand"><i class="icn-logo material-icons">lightbulb_outline</i>Node Login App</a>
+
+            <!--"currentUser" below is defined in app.js as "res.locals.currentUser"  -->
+            <!--show Signup link and login button if user is NOT logged in-->
+          <% if(!currentUser){ %>
+            <div class="nav-items clearfix"><a href="/register" class="nav-item nav-link">Sign Up</a>
+                <a href="/about" class="nav-item nav-link">About</a>
+                <a href="/contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="/login" class="btn btn-info pull-md-right">Login</a>
+                <% } %>
+
+            <!--DO NOT show Signup button and login button if user is NOT logged in-->
+            <!-- show logout button and profile picture/avatar if user IS logged in-->
+            <div class="nav-items clearfix">
+            <% if(currentUser){ %>
+            <a href="/about" class="nav-item nav-link">About</a>
+            <a href="/contact" class="nav-item nav-link">Contact</a>
+            <a href="/profile" class="nav-item nav-link">My Profile</a>
+            <img src="/images/avatar.png" alt="avatar" class="avatar img-circle hidden-xs-down pull-md-right"/>
+            </div>
+
+            <a href="/logout" class="btn btn-info pull-md-right">Log Out</a>
+                <% } %>
+        </div>
+    </div>
+</nav>
+
+<!--<p class="foot text-xs-center">nodeLoginapp 2016</p>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+<!---->

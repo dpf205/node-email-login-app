@@ -1,0 +1,33 @@
+<% include layout %>
+<div class="main container row">
+    <div class="col-md-6 col-md-offset-3">
+        <h1 class="display-4 m-b-2"> Sign Up With Email <a href="#"></a> </h1>
+            <form method="POST" action="/register">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" placeholder="first and last" name="name" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" placeholder="name@email.com" name="email" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="favoriteBook">Favorite Subject(s):</label>
+                    <input id="favoriteBook" type="text" placeholder="what interests you?" name="favoriteSubject" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="pw">Password:</label>
+                    <input id="pw" type="password" name="password" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="pw2">Confirm Password:</label>
+                    <input id="pw2" type="password" name="confirmPassword" class="form-control"/>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </form>
+    </div>
+
+</div>
+
+
+
